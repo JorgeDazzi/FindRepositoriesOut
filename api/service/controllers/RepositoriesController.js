@@ -3,16 +3,11 @@ const fetch = require('node-fetch');
 /* External API */
 const githubUrl = "https://api.github.com/";
 
-exports.getRepositoryById = function(res, id){
-    return fetch(`${githubUrl}repositories/${id}`)
-    .then(response => response.json())
-    .then(json => {
-        if(json.message != null && json.message == "Not Found")
-            res.status(404).json();
-        
-        res.status(200).json( json );
-    })
-    .catch(error => error);
+exports.getRepositoryById = async function(id){
+    let response = await fetch(`${githubUrl}repositories/${id}`);
+    let json = await response.json();
+    
+    return await json
 }
 
 

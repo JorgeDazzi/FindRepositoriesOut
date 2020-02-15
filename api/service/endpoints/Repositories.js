@@ -10,10 +10,14 @@ const repoController = require('../controllers/RepositoriesController')
     the repository desires
 */
 router.get('/:id', async function(req, res){
-    repoController.getRepositoryById(
-          res,
-          req.params.id
-    );
+    repoController.getRepositoryById(req.params.id)
+    .then(json => {
+        if(json.message != null && json.message == "Not Found")
+            res.status(404).json(json);
+
+        res.status(200).json(json);
+    })
+    .catch( error => res.status(400).json(error))
 });
 
 
