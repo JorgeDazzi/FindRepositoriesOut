@@ -10,10 +10,8 @@ exports.getBookmarks = function(res){
 
         for(let i = 0; i < bm.getBookmarks().length;i++){
             book.push(await repoController.getRepositoryById(bm.getBookmarks()[i]));
-            console.log(book.length);
         }
 
-        console.log(book);
         resolve(book);
     })
     .then( json => res.status(200).json(json))
