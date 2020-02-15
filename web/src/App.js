@@ -65,6 +65,19 @@ class App extends React.Component {
     );
   }
 
+  /*
+    Send the ID to API, in order to delete it from Bookmark
+    Method: DELETE
+  */
+  deleteFromBookmark = async (id)=> {
+    const url = `${this.state.api}bookmark/${id}`;
+    let response  = fetch(url,{method:"DELETE"});
+    const data = (await response).json();
+    data.then(
+      ready => this.getBookmark().then(data => this.setState({books:data}))
+    );
+  }
+
   render (){
     return(
       <div className="App">
@@ -76,7 +89,8 @@ class App extends React.Component {
             addToBookmark={(id)=>this.addToBookmark(id)}/>
 
           <BookmarkList 
-            books={this.state.books}/>
+            books={this.state.books}
+            deleteFromBookmark={(id)=>this.deleteFromBookmark(id)}/>
         </div>
       </div>
     )};

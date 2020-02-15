@@ -8,6 +8,10 @@ class BookmarkItem extends Component {
         return txt; 
     }
     
+    delBookmark = (id)=>{
+        this.props.deleteFromBookmark(id);
+    }
+    
     render() {
         return (
             <div className="repo">
@@ -17,7 +21,7 @@ class BookmarkItem extends Component {
                         <button onClick={()=>window.open(this.props.repo.html_url,"_blank")} ><i className="material-icons">open_in_new</i></button>
                     </div>
                     <div className="externalLink">
-                        <button onClick={null} ><i className="material-icons">delete_forever</i></button>
+                        <button onClick={()=>this.delBookmark(this.props.repo.id)} ><i className="material-icons">delete_forever</i></button>
                     </div>
                 </div>
             </div>

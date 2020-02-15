@@ -8,8 +8,9 @@ class Bookmarks extends Component {
                 {
                     this.props.books.map(
                         repo => <BookmarkItem 
-                                    repo={repo} key={repo.id} 
-                                    /*deleteFromBookmark={(id)=>this.props.deleteFromBookmark(id)}*//>
+                                    repo={repo} 
+                                    key={repo.id} 
+                                    deleteFromBookmark={(id)=>this.props.deleteFromBookmark(id)}/>
                     )
                 }
             </div>
