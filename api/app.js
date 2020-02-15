@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
+const repositories = require('./endpoints/Repositories');
+
 /* Init settings */
 const app = express();
 const port = 8081;
@@ -12,7 +14,7 @@ app.use(cors());
 
 
 //Endpoints Setup
-//......
+app.use('/repo', repositories);
 
 //Listen Express Setup
 app.listen(
