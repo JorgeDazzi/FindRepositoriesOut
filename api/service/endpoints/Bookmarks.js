@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 /* Controllers */
-//const bookController = require('../controllers/')
+const bookController = require('../controllers/BookmarksController')
 
 /* Models */
 const bm = require('../models/bookmark');
@@ -14,7 +14,7 @@ const bm = require('../models/bookmark');
     Return a list of all bookmarks saved
 */
 router.get('/', function(req, res){
-    //controller
+    bookController.getBookmarks(res);
 });
 
 router.post('/', function(req,res) {
