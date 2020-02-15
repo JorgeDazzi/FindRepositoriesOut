@@ -4,10 +4,6 @@ const router = express.Router();
 /* Controllers */
 const bookController = require('../controllers/BookmarksController')
 
-/* Models */
-const bm = require('../models/bookmark');
-
-
 
 /*
     Method: GET
@@ -18,12 +14,17 @@ router.get('/', function(req, res){
 });
 
 router.post('/', function(req,res) {
-    //controller
+    bookController.addBookmark(req.body.id);
+    res.status(200).json({status:"OK"});
 });
 
 
-router.delete('/delete/:id', function(req,res) {
-    //controller
+router.delete('/:id', function(req,res) {
+    let result = bookController.deleteBookmark(req.params.id);
+    if(result.status == "Success")
+        res.status(200).json(result)
+    else
+        res.status(404).json(result)
 });
 
 

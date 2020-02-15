@@ -20,3 +20,14 @@ exports.getBookmarks = function(res){
     .catch(error => res.status(400).json(error))
     
 }
+
+exports.addBookmark = function(id){
+    bm.addBookmark(id);
+}
+
+exports.deleteBookmark = function(id){
+    if(bm.deleteBookmark(id))
+        return {status:"Success"};
+    else
+        return {status:"Not Found"};
+}
