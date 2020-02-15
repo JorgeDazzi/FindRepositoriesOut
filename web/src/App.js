@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBar from "./components/SearchBar";
 import RepoList from "./components/RepoList";
+import BookmarkList from "./components/BookmarkList";
 import './App.css';
 
 class App extends React.Component {
@@ -11,6 +12,11 @@ class App extends React.Component {
       repositories: [],
       api:"http://localhost:8081/"
     }
+  }
+
+  componentDidMount(){
+    this.getBookmark()
+    .then(data => this.setState({books:data}));
   }
 
   /**
@@ -68,6 +74,9 @@ class App extends React.Component {
           <RepoList 
             repositories={this.state.repositories}
             addToBookmark={(id)=>this.addToBookmark(id)}/>
+
+          <BookmarkList 
+            books={this.state.books}/>
         </div>
       </div>
     )};
