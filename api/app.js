@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const repositories = require('./endpoints/Repositories');
+const repositories = require('./service/endpoints/Repositories');
 
 /* Init settings */
 const app = express();
