@@ -48,3 +48,65 @@ code {
   text-shadow: 1px #000;
   font-weight: bold;
 }
+
+.App .content{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+
+/* Repo List */
+.App .list{
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 500px;
+  padding: 4px;
+  box-sizing: border-box;
+}
+.App .list .repo{
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2px 5px;
+  justify-content: center;
+  align-items: center;
+  background: #aa076b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #aa076b, #61045f); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #aa076b, #61045f); 
+  font-size: 14px;
+  color:#fff;
+  border:1px solid #FFF;
+  margin-bottom: 5px;
+  border-radius: 12px;
+  box-shadow: 5px 6px #88888879;
+}
+.App .list .repo .header{
+  display: flex;
+  width: 100%;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+}
+.App .list .repo .header .title{
+  display: flex;
+  width: 380px;
+}
+.App .list .repo .header .externalLink{
+  display: flex;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.App .list .repo .header .externalLink button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.App .list .repo .header .externalLink button i{
+  color:#FFF;
+}

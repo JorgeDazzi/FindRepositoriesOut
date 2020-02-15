@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchBar from "./components/SearchBar";
+import RepoList from "./components/RepoList";
 import './App.css';
 
 class App extends React.Component {
@@ -7,6 +8,10 @@ class App extends React.Component {
     return(
       <div className="App">
         <SearchBar/>
+
+        <div className="content">
+          <RepoList />
+        </div>
       </div>
     )};
 }
