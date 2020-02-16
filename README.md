@@ -1,6 +1,8 @@
 # FindRepositoriesOut
 Code Challenge - Repositories Search + Bookmark
 
+## Table of Contents:
+[Endpoint](#endpoint)
 
 ## Endpoint:
 - [x] one endpoint that takes a search term and returns a list of repositories. Hint: Don’t
