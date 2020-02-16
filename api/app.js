@@ -1,3 +1,4 @@
+const config = require('./config');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -7,7 +8,6 @@ const bookmark = require('./service/endpoints/Bookmarks');
 
 /* Init settings */
 const app = express();
-const port = 8081;
 
 //Body Setup
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -21,6 +21,6 @@ app.use('/bookmark', bookmark);
 
 //Listen Express Setup
 app.listen(
-    port, 
-    () => {console.log(`Server started on http://localhost:${port}/`)}
+    config.port, 
+    () => {console.log(`Server started on http://localhost:${config.port}/`)}
 );
