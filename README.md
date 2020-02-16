@@ -2,7 +2,7 @@
 Code Challenge - Repositories Search + Bookmark
 
 ## Table of Contents:
-- [Endpoint](#endpoint)
+- [Backend](#endpoint)
 - [Frontend](#frontend)
 - [Installation](#installation)
 - [API Documentation](#api-documentation)
@@ -63,8 +63,8 @@ npm install
 `````
 
 3. API settings:
- - Set the PORT for your application __port = <Integer>__
- - Set the GITHUBAPI URL for github api __githubAPI = <String>__
+ - Set the PORT for your application __port = < Integer >__
+ - Set the GITHUBAPI URL for github api __githubAPI = < String >__
 `````javascript
 class Config{
     
