@@ -7,7 +7,7 @@ Code Challenge - Repositories Search + Bookmark
 - [Installation](#installation)
 - [API Documentation](#api-documentation)
 
-## Endpoint:
+## Backend:
 - [x] one endpoint that takes a search term and returns a list of repositories. Hint: Don’t
 implement pagination for this challenge.
 - [x] one endpoint that allows bookmarking a repository by its id. Hint: Bookmarks don’t need
@@ -45,11 +45,13 @@ git clone https://github.com/JorgeDazzi/FindRepositoriesOut.git
 `````
 2. Install dependencies from directory api and web
 `````
-- FindRepositoriesOut
+- /FindRepositoriesOut
   |
-   - - -> api
+   - - -> /api
+  |       |
+  |        - - ->config.js
   |
-   - - -> web
+   - - -> /web 
 `````  
 Install the dependecies:
 `````
@@ -59,7 +61,22 @@ cd ../
 cd web
 npm install
 `````
-3. Start the Nodemon and React
+
+3. API settings:
+ - Set the PORT for your application __port = <Integer>__
+ - Set the GITHUBAPI URL for github api __githubAPI = <String>__
+`````javascript
+class Config{
+    
+    //Choose wisely the port for your application
+    port = 8081;
+
+    //Github API v3 URL
+    githubAPI = "https://api.github.com/";
+}
+`````
+
+4. Start the Nodemon and React
   `````
   [ api directory ]: node app.js
   `````
