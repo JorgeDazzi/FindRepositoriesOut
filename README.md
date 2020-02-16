@@ -8,6 +8,11 @@ implement pagination for this challenge.
 - [x] one endpoint that allows bookmarking a repository by its id. Hint: Bookmarks don’t need
 to be persisted in a database for this challenge.
 - [x] one endpoint to get all bookmarked repositories
+    ###### Bonus
+    - [x] Add documentation for your API in a format of your choice
+    - [ ] Add tests.
+    - [x] Add basic authentication to your API
+    - [x] Add an endpoint to remove a bookmark
 
     ###### Be mindful of the following:
     - [x] short code and more than one file.
