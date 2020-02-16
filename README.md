@@ -2,10 +2,10 @@
 Code Challenge - Repositories Search + Bookmark
 
 ## Table of Contents:
-[Endpoint](#endpoint)
-[Frontend](#frontend)
-[Installation](#installation)
-[API Documentation](#api-documentation)
+- [Endpoint](#endpoint)
+- [Frontend](#frontend)
+- [Installation](#installation)
+- [API Documentation](#api-documentation)
 
 ## Endpoint:
 - [x] one endpoint that takes a search term and returns a list of repositories. Hint: Don’t
