@@ -28,13 +28,13 @@ to be persisted in a database for this challenge.
 git clone https://github.com/JorgeDazzi/FindRepositoriesOut.git
 `````
 2. Install dependencies from directory api and web
-
-        - FindRepositoriesOut
-          |
-           - - -> api
-          |
-           - - -> web
-   
+`````
+- FindRepositoriesOut
+  |
+   - - -> api
+  |
+   - - -> web
+`````  
 Install the dependecies:
 `````
 cd api
