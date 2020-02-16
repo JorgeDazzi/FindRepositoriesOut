@@ -1,4 +1,4 @@
-# FindRepositoriesOut
+# Find.Repositories.Out
 Code Challenge - Repositories Search + Bookmark
 
 ## Table of Contents:
@@ -61,7 +61,7 @@ npm install
 `````
 3. Start the Nodemon and React
   `````
-  [ api directory ]: nodemon app.js
+  [ api directory ]: node app.js
   `````
   
   `````
@@ -70,7 +70,7 @@ npm install
 
 ## API Documentation:
 
-__Repository by ID__
+__Single repository by ID__
 `````
 GET /repo/:id
 `````
@@ -90,7 +90,7 @@ Mandatory | Name | Type | Description
 Yes | term | String| Term you want to search for
 
 
-__Receive a list of all repository saved__
+__Receive a list of all repositories saved__
 `````
 GET /bookmark
 `````
