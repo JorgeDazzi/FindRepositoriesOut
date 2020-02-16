@@ -21,7 +21,7 @@ to be persisted in a database for this challenge.
 
     ###### Be mindful of the following:
     - [x] short code and more than one file.
-    - [ ] the application that could be externally configurable (what is it means)
+    - [x] the application that could be externally configurable (what is it means)
     - [x] git for version control
     - [x] Include a small README that explains how to start your service
 ## Frontend
